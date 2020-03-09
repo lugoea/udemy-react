@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Person from './Person/Person';
-import Radium from 'radium';
+import Radium, {StyleRoot} from 'radium';
 
 const App = props =>  {
     
@@ -108,6 +108,7 @@ const App = props =>  {
     }
 
     return (
+      <StyleRoot>
     <div className="App">
       <h1>Hi I'm a react app</h1> 
       <p className={classes.join(' ')}>This is working ok!!!</p>
@@ -115,6 +116,7 @@ const App = props =>  {
       {persons}   
       
     </div>
+    </StyleRoot>
   );
 }
 
